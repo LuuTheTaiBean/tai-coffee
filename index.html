@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tai's Coffee — Quán cà phê đơn giản</title>
+    <style>
+        :root {
+            --bg: #f7f3ef;
+            --accent: #6b4f3b;
+            --accent-2: #c9a66b;
+            --text: #2b2b2b;
+            --card: #fff;
+            --muted: #6d6d6d;
+            --radius: 12px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.45;
+        }
+
+        header {
+            background: linear-gradient(90deg, rgba(107, 79, 59, 0.95), rgba(201, 166, 107, 0.95));
+            color: white;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .logo {
+            width: 44px;
+            height: 44px;
+            background: var(--card);
+            color: var(--accent);
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            font-weight: 800;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.95);
+            text-decoration: none;
+            margin-left: 14px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 28px auto;
+            padding: 0 20px 80px;
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.12)), url('https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=3b7af3ce3c8c063a3d1e3b4cd8bb9b13');
+            background-size: cover;
+            background-position: center;
+            border-radius: var(--radius);
+            color: white;
+            padding: 44px;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 24px;
+            align-items: center;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .hero h1 {
+            margin: 0 0 10px 0;
+            font-size: 2rem;
+        }
+
+        .hero p {
+            margin: 0 0 16px;
+            color: rgba(255, 255, 255, 0.95)
+        }
+
+        .cta {
+            display: inline-block;
+            background: var(--accent-2);
+            color: var(--accent);
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        .card {
+            background: var(--card);
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(20, 20, 20, 0.06);
+        }
+
+        /* sections */
+        section {
+            margin-top: 22px
+        }
+
+        h2 {
+            margin: 0 0 8px 0
+        }
+
+        .grid {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .menu-item {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .menu-item img {
+            width: 78px;
+            height: 78px;
+            object-fit: cover;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .price {
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 28px 20px;
+            margin-top: 36px;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9rem
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border-radius: 8px;
+            border: 1px solid #e6e0da;
+            background: white;
+            font-size: 0.95rem;
+        }
+
+        button {
+            margin-top: 12px;
+            background: var(--accent);
+            color: white;
+            border: 0;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        @media (max-width:800px) {
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 28px
+            }
+
+            nav {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <div class="logo">TC</div>
+            <div>
+                Tai's Coffee<br><small style="opacity:.9;font-weight:600;font-size:.9rem">Quán cà phê nhỏ - ấm
+                    cúng</small>
+            </div>
+        </div>
+        <nav aria-label="Chuyển hướng">
+            <a href="#about">Giới thiệu</a>
+            <a href="#menu">Thực đơn</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <div>
+                <h1 id="hero-title">Chào mừng đến Tai's Coffee</h1>
+                <p>Thưởng thức cà phê pha tay, bánh ngọt tự làm và không gian yên tĩnh để đọc sách hoặc làm việc.</p>
+                <a class="cta" href="#menu">Xem thực đơn</a>
+            </div>
+            <div class="card" aria-hidden="false">
+                <h3 style="margin-top:0">Giờ mở cửa</h3>
+                <p style="margin:6px 0"><strong>Thứ 2 - CN</strong><br>07:00 - 21:00</p>
+                <h4 style="margin:12px 0 6px 0">Địa chỉ</h4>
+                <p style="margin:0">Số 123, Đường Cà Phê, Quận Trung Tâm</p>
+                <p style="margin-top:10px;"><strong>Hotline:</strong> 0123 456 789</p>
+            </div>
+        </section>
+
+        <section id="about" class="card" aria-labelledby="about-title">
+            <h2 id="about-title">Giới thiệu</h2>
+            <p style="color:var(--muted)">Tai's Coffee được thành lập với niềm đam mê cà phê chất lượng, phục vụ những
+                tách cà phê cân bằng, rang xay nhẹ nhàng và không gian thân thiện. Chúng tôi chú trọng nguyên liệu tươi
+                và menu đơn giản nhưng tinh tế.</p>
+        </section>
+
+        <section id="menu">
+            <h2>Thực đơn tiêu biểu</h2>
+            <div class="grid" style="margin-top:12px">
+                <div class="card menu-item">
+                    <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=c905c7b2e8a3f515a6e4294b3a8b5a2a"
+                        alt="Cà phê espresso">
+                    <div>
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <strong>Espresso</strong>
+                            <div class="price">30.000₫</div>
+                        </div>
+                        <p style="margin:6px 0 0;color:var(--muted);font-size:.95rem">Tách đậm đà, chiết xuất hoàn hảo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card menu-item">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=7c6b2f0f4b6b2a9b0a5b8d1c2e3f4a1b"
+                        alt="Cappuccino">
+                    <div>
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <strong>Cappuccino</strong>
+                            <div class="price">45.000₫</div>
+                        </div>
+                        <p style="margin:6px 0 0;color:var(--muted);font-size:.95rem">Bọt sữa mịn, vị cân bằng.</p>
+                    </div>
+                </div>
+
+                <div class="card menu-item">
+                    <img src="https://images.unsplash.com/photo-1541976076758-3b0c2b3a6b10?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=9a7f5d8b45a8c7b3d6a4b2c1e0f9d8c7"
+                        alt="cold brew">
+                    <div>
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <strong>Cold Brew</strong>
+                            <div class="price">55.000₫</div>
+                        </div>
+                        <p style="margin:6px 0 0;color:var(--muted);font-size:.95rem">Ủ lạnh 12 giờ, vị dịu mượt.</p>
+                    </div>
+                </div>
+
+                <div class="card menu-item">
+                    <img src="https://images.unsplash.com/photo-1551022379-69df46f5a38d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=2e4e7b8d9c1b3a6d4f5e6a7b8c9d0e1f"
+                        alt="bánh ngọt">
+                    <div>
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <strong>Bánh scone</strong>
+                            <div class="price">35.000₫</div>
+                        </div>
+                        <p style="margin:6px 0 0;color:var(--muted);font-size:.95rem">Bánh nướng mới mỗi ngày.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="card" aria-labelledby="contact-title">
+            <h2 id="contact-title">Đặt bàn / Liên hệ</h2>
+            <div style="display:grid;gap:16px;grid-template-columns:1fr 340px; margin-top:12px">
+                <div>
+                    <p style="color:var(--muted)">Gửi tin nhắn cho chúng tôi nếu bạn muốn đặt chỗ hoặc hỏi về thực đơn.
+                        (Form dưới đây chỉ là mẫu; để hoạt động cần tích hợp phía máy chủ hoặc dịch vụ form.)</p>
+                    <form onsubmit="event.preventDefault(); alert('Cảm ơn! Chúng tôi đã nhận được tin nhắn.');">
+                        <label for="name">Họ tên</label>
+                        <input id="name" type="text" placeholder="Tên của bạn" required>
+
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="email@domain.com" required>
+
+                        <label for="message">Tin nhắn</label>
+                        <textarea id="message" rows="5" placeholder="Bạn muốn đặt bàn vào lúc..."></textarea>
+
+                        <button type="submit">Gửi</button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="card" style="padding:12px">
+                        <h4 style="margin-top:0">Địa chỉ</h4>
+                        <p style="margin:6px 0;color:var(--muted)">Số 123, Đường Cà Phê, Quận Trung Tâm, Thành phố</p>
+                        <p style="margin:6px 0"><strong>Hotline:</strong> 0123 456 789</p>
+                        <p style="margin:6px 0;color:var(--muted)">Giờ mở cửa: 07:00 - 21:00</p>
+                        <div style="margin-top:10px;border-radius:8px;overflow:hidden">
+                            <!-- Placeholder map: thay bằng iframe Google Maps nếu cần -->
+                            <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=8c4e9a68b1c6de9f6a7d2b4f3c1a9e8b"
+                                alt="Map placeholder" style="width:100%;display:block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div style="max-width:1100px;margin:0 auto;padding:0 20px">
+            <small>© Tai's Coffee — Đã đăng ký bản quyền nội dung bởi quán. Thiết kế đơn giản cho trang giới
+                thiệu.</small>
+        </div>
+    </footer>
+</body>
+
+</html>
+</div>
+</section>
+</div>
+</nav>
