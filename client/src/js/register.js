@@ -22,7 +22,7 @@ const handleRegister = function (event) {
     alert("Vui lòng nhập đầy đủ các trường dữ liệu:");
     return;
   }
-  if (password === confirmPassword) {
+  if (password !== confirmPassword) {
     alert("Mật khẩu không khớp!");
     return;
   }
