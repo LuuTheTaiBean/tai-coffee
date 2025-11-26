@@ -94,57 +94,37 @@
                         </div>
                     </div>
                 </div>
-                <!-- Sản phẩm 2 -->
-                <div class="product-item col-md-3 col-6">
-                    <div class="content p-2">
-                        <img src="https://blog.maybanhang.net/hs-fs/hubfs/Cafe%20caf%C3%A9%20c%C3%A0%20ph%C3%AA%20coffee%202.jpg?width=640&height=295&name=Cafe%20caf%C3%A9%20c%C3%A0%20ph%C3%AA%20coffee%202.jpg"
-                            alt="tra sen vang" class="img-fluid rounded">
-                        <div class="text p-2">
-                            <div class="d-flex justify-content-between flex-column align-items-center">
-                                <h5 class="mb-2 text-uppercase">Trà sen vàng</h5>
-                                <p class="mb-3">Giá: <span class="fs-6 fw-semibold text-danger">50.000 VND</span></p>
-                            </div>
-                            <button type="button" class="btn btn-primary mt-2 w-100 ">Đặt hàng</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Sản phẩm 3 -->
-                <div class="product-item col-md-3 col-6">
-                    <div class="content p-2">
-                        <img src="https://blog.maybanhang.net/hs-fs/hubfs/Cafe%20caf%C3%A9%20c%C3%A0%20ph%C3%AA%20coffee%202.jpg?width=640&height=295&name=Cafe%20caf%C3%A9%20c%C3%A0%20ph%C3%AA%20coffee%202.jpg"
-                            alt="tra sen vang" class="img-fluid rounded">
-                        <div class="text p-2">
-                            <div class="d-flex justify-content-between flex-column align-items-center">
-                                <h5 class="mb-2 text-uppercase">Trà sen vàng</h5>
-                                <p class="mb-3">Giá: <span class="fs-6 fw-semibold text-danger">50.000 VND</span></p>
-                            </div>
-                            <button type="button" class="btn btn-primary mt-2 w-100 ">Đặt hàng</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- Sản phẩm 4 -->
-                <div class="product-item col-md-3 col-6">
-                    <div class="content p-2">
-                        <img src="https://blog.maybanhang.net/hs-fs/hubfs/Cafe%20caf%C3%A9%20c%C3%A0%20ph%C3%AA%20coffee%202.jpg?width=640&height=295&name=Cafe%20caf%C3%A9%20c%C3%A0%20ph%C3%AA%20coffee%202.jpg"
-                            alt="tra sen vang" class="img-fluid rounded">
-                        <div class="text p-2">
-                            <div class="d-flex justify-content-between flex-column align-items-center">
-                                <h5 class="mb-2 text-uppercase">Trà sen vàng</h5>
-                                <p class="mb-3">Giá: <span class="fs-6 fw-semibold text-danger">50.000 VND</span></p>
-                            </div>
-                            <button type="button" class="btn btn-primary mt-2 w-100 ">Đặt hàng</button>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- Modal -->
             <div class="order-form">
-                <div class="p-3 bg-light rounded shadow ">
-                    <button>
-                        Đóng
-                    </button>
+                <div class="p-3 bg-light rounded shadow content">
+                    <button type="button" class="btn btn-outline-dark btn-cancel mb-3">Đóng</button>
+
+                    <div class="row">
+                        <div class="col-md-4 col-12">
+                            <img src="https://blog.maybanhang.net/hs-fs/hubfs/Cafe%20caf%C3%A9%20c%C3%A0%20ph%C3%AA%20coffee%202.jpg?width=640&height=295&name=Cafe%20caf%C3%A9%20c%C3%A0%20ph%C3%AA%20coffee%202.jpg"
+                                alt="trà sen vàng" class="img-fluid rounded">
+                        </div>
+
+                        <div class="col-md-8 col-12">
+                            <h5>Trà sen vàng</h5>
+                            <p>Giá: 50.000 đ</p>
+
+                            <form id="order-form">
+                                <div class="mb-3">
+                                    <label for="quantity" class="form-label">Số lượng</label>
+                                    <input type="number" class="form-control" id="quantity" value="1" min="1" required>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-confirm-order w-100" data-price="">
+                                    Xác nhận
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </section>
         <footer class="bg-dark text-white py-5">
             <div class="container">
